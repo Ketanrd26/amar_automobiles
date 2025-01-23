@@ -1,0 +1,99 @@
+.header_parent {
+  width: 100%;
+  background-color: var(--white);
+  height: auto;
+  
+  .header_cont {
+    height: auto;
+    padding: calc(var(--unit));
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    position: relative;
+
+    .left_side_content {
+      width: 70%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+    //   background-color: red;
+      gap: calc(var(--unit) * 2);
+
+    .logo{
+        height: 50px;
+
+
+        img{
+            height: 100%;
+          }
+    }
+
+      .navlinks {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: calc(var(--unit));
+
+        a {
+          color: var(--black);
+          font-size: calc(var(--unit));
+          font-weight: 500;
+          font-family: "Josefin Sans", serif;
+        }
+      }
+    }
+
+    .right_side_content {
+      width: 30%;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    //   background-color: black;
+      height: auto;
+
+      .contact_num {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: calc(var(--unit)/2);
+        cursor: pointer;
+
+        .icon{
+            width: 50px;
+            background: url("../../assests/icons/phone-settings.gif");
+            height: 100%;
+        }
+      }
+    }
+
+    .bike_move{
+        position: absolute;
+        height: 100%;
+        width: 100px;
+        background: url("../../assests/icons/race.gif");
+        top: 50%;
+        right: 15%;
+        transform: translateY(-50%) rotateY(0deg);
+        animation: movebike 10s linear infinite;
+
+        @keyframes movebike {
+            0%{
+                right: 15%;
+                transform: translateY(-50%) rotateY(180deg);
+            }50%{
+                
+                transform: translateY(-50%) rotateY(180deg);
+            }75%{
+                right: 37%;
+                transform: translateY(-50%) rotateY(0deg);
+            }
+            100%{
+                right: 15%;
+                transform: translateY(-50%) rotateY(0deg);
+            }
+        }
+    }
+  }
+}
