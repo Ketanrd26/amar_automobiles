@@ -33,7 +33,7 @@ const Header = () => {
         <div class="header_cont cont">
           <div class="left_side_content">
             <div class="hamburger">
-<HiOutlineBars3/>
+              <HiOutlineBars3 />
             </div>
             <div class="logo">
               <img src={logo} alt="" />
@@ -46,20 +46,13 @@ const Header = () => {
           </div>
           <div class="right_side_content">
             <a class="contact_num">
-                <div class="icon bg-img-cover">
-
-                </div>
-              <p>
-                +911234567890
-              </p>
+              <div class="icon bg-img-cover"></div>
+              <p>+911234567890</p>
             </a>
             <div class="bike_move ">
-             <div class="bike_image bg-img-contain">
-              
-             </div>
+              <div class="bike_image bg-img-contain"></div>
+            </div>
           </div>
-          </div>
-          
         </div>
       </div>
     </>
