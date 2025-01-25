@@ -21,7 +21,7 @@ const AfterHeader = () => {
             </div>
             <input type="search" placeholder="Search For Products" />
           </div>
-          <div class="drop_down">
+          <div class="drop_down drop_info">
             <div class="drop_down_input">
               <div class="icon"></div>
               <p></p>

@@ -1,0 +1,106 @@
+.herosection_parent{
+    width: 100%;
+    height: calc(100dvh - 70px);
+    // margin-top: calc(70px + 80px);
+
+    .mySwiper{
+        width: 100%;
+        height: 100%;
+
+        .swiper-slide{
+            width: 100%;
+            height: 100%;
+            background-color: black;
+
+            .slide_item{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .left{
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    padding: 0px 80px;
+                    flex-direction: column;
+                    gap: var(--unit);
+                
+                    h2{
+                        color: white;
+                        font-size: calc(var(--unit)*4);
+                        line-height: 100%;
+                    }
+
+                    p{
+                        color: grey;
+          font-family: "Josefin Sans", serif;
+
+                    }
+                }
+                .right{
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    align-items: center;
+                    
+                    img{
+                        height: 100%;
+                    }
+                    
+                }
+            }
+
+            .slide_item2{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+
+                .left{
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+
+
+                    img{
+                        height: 100%;
+                    }
+
+                }
+
+                .right{
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-start;
+                    padding: 0px 80px;
+                    flex-direction: column;
+                    gap: var(--unit);
+
+                    h2{
+                        color: white;
+                        font-size: calc(var(--unit)*4);
+                        line-height: 100%;
+                    }
+
+                    p{
+                        color: grey;
+          font-family: "Josefin Sans", serif;
+
+                    }
+                }
+            }
+        }
+    }
+
+
+}

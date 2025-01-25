@@ -2,7 +2,7 @@
   width: 100%;
   background-color: var(--white);
   height: auto;
-  
+
   .header_cont {
     height: auto;
     padding: calc(var(--unit));
@@ -16,17 +16,28 @@
       display: flex;
       justify-content: flex-start;
       align-items: center;
-    //   background-color: red;
+      // background-color: blue;
       gap: calc(var(--unit) * 2);
 
-    .logo{
+      .hamburger {
+        height: 100%;
+        aspect-ratio: 1;
+        display: none;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          font-size: calc(var(--unit) * 2);
+        }
+      }
+
+      .logo {
         height: 50px;
 
-
-        img{
-            height: 100%;
-          }
-    }
+        img {
+          height: 100%;
+        }
+      }
 
       .navlinks {
         display: flex;
@@ -44,56 +55,180 @@
     }
 
     .right_side_content {
-      width: 30%;
+      width: 50%;
       display: flex;
       justify-content: flex-end;
       align-items: center;
-    //   background-color: black;
+      // background-color: black;
       height: auto;
+      flex-direction: row-reverse;
 
       .contact_num {
-        width: 100%;
+        width: 35%;
         height: 100%;
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        gap: calc(var(--unit)/2);
+        gap: calc(var(--unit) / 2);
         cursor: pointer;
 
-        .icon{
-            width: 50px;
-            background: url("../../assests/icons/phone-settings.gif");
-            height: 100%;
+        .icon {
+          width: 50px;
+          background: url("../../assests/icons/phone-settings.gif");
+          height: 100%;
         }
       }
     }
 
-    .bike_move{
+    .bike_move {
+      // background-color: red;
+      height: 100%;
+      width: 80%;
+      position: relative;
+
+      .bike_image {
         position: absolute;
+        right: 0;
         height: 100%;
-        width: 100px;
         background: url("../../assests/icons/race.gif");
-        top: 50%;
-        right: 15%;
-        transform: translateY(-50%) rotateY(0deg);
+        width: 50px;
+        transform: rotateY(180deg);
+
         animation: movebike 10s linear infinite;
 
         @keyframes movebike {
-            0%{
-                right: 15%;
-                transform: translateY(-50%) rotateY(180deg);
-            }50%{
-                
-                transform: translateY(-50%) rotateY(180deg);
-            }75%{
-                right: 37%;
-                transform: translateY(-50%) rotateY(0deg);
-            }
-            100%{
-                right: 15%;
-                transform: translateY(-50%) rotateY(0deg);
-            }
+          0% {
+            right: 0;
+            transform: rotateY(180deg);
+          }
+          50% {
+            transform: rotateY(180deg);
+          }
+          75% {
+            right: 90%;
+            transform: rotateY(0deg);
+          }
+          100% {
+            right: 0;
+            transform: rotateY(0deg);
+          }
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .header_parent {
+    .header_cont {
+      .left_side_content {
+        width: 30%;
+        gap: calc(var(--unit) / 2);
+        .hamburger {
+          display: flex;
+        }
+        .navlinks {
+          display: none;
+        }
+      }
+
+      .right_side_content {
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .header_parent {
+    .header_cont {
+      .left_side_content {
+        width: 50%;
+
+        .logo{
+          height: 40px ;
+          img{
+            height: 100%;
+          }
+        }
+      }
+
+      .right_side_content {
+        width: 50%;
+
+       
+        .contact_num {
+          width: 50%;
+        }
+
+        .bike_move {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 550px){
+  .header_parent {
+    .header_cont {
+      .left_side_content {
+        width: 30%;
+
+        .logo{
+          height: 30px !important;
+          img{
+            height: 100%;
+          }
+        }
+      }
+
+      .right_side_content {
+        width: 70%;
+
+       
+        .contact_num {
+          width: 50%;
+        }
+
+        .bike_move {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px){
+  .header_parent {
+    .header_cont {
+      .left_side_content {
+        width: 30%;
+
+        .logo{
+          height: 30px !important;
+          img{
+            height: 100%;
+          }
+        }
+      }
+
+      .right_side_content {
+        width: 70%;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+       
+        .contact_num {
+          width: 100%;
+        }
+
+        .bike_move {
+          width: 50%;
+          display: none;
+        }
+      }
     }
   }
 }

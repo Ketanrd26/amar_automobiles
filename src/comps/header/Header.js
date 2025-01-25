@@ -2,6 +2,8 @@ import React from "react";
 import "./Header.scss";
 import logo from "../../assests/tp_logo.png";
 import { Link } from "react-router-dom";
+
+import { HiOutlineBars3 } from "react-icons/hi2";
 const Header = () => {
   const navs = [
     {
@@ -30,6 +32,9 @@ const Header = () => {
       <div class="header_parent parent">
         <div class="header_cont cont">
           <div class="left_side_content">
+            <div class="hamburger">
+<HiOutlineBars3/>
+            </div>
             <div class="logo">
               <img src={logo} alt="" />
             </div>
@@ -48,10 +53,13 @@ const Header = () => {
                 +911234567890
               </p>
             </a>
+            <div class="bike_move ">
+             <div class="bike_image bg-img-contain">
+              
+             </div>
           </div>
-          <div class="bike_move bg-img-contain">
-
           </div>
+          
         </div>
       </div>
     </>
