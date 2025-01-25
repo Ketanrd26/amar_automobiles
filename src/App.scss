@@ -42,6 +42,11 @@ body {
   }
 }
 
+p {
+  font-family: "Josefin Sans", serif;
+  color: grey;
+}
+
 .bg-img-cover {
   background-position: center center !important;
   background-repeat: no-repeat !important;
@@ -68,17 +73,15 @@ a {
   position: relative;
   overflow: hidden;
 
-
   .text {
     color: var(--white);
     font-family: "Josefin Sans", serif;
     position: relative;
     z-index: 2;
     transition: var(--trans);
-
   }
 
-  &::after{
+  &::after {
     content: "";
     position: absolute;
     top: 0;
@@ -89,13 +92,31 @@ a {
     transition: var(--trans);
   }
 
-  &:hover{
-    &::after{
+  &:hover {
+    &::after {
       left: 0;
     }
 
-    .text{
+    .text {
       color: black;
+    }
+  }
+
+  &.btn2{
+    border: 1px solid black;
+
+    .text{
+      color: var(--black);
+    }
+
+    &::after{
+      background-color: var(--black);
+    }
+
+    &:hover{
+      .text{
+        color: var(--white);
+      }
     }
   }
 }
